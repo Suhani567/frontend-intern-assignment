@@ -1,5 +1,7 @@
 export default function FilterBar({ category, setCategory, categories }) {
   return (
+
+    // Filters the items by category 
     <select
       className="select"
       value={category}

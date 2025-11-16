@@ -1,6 +1,8 @@
 export default function ProductModal({ product, close }) {
   if (!product) return null;
   return (
+
+    // Product Detail Modal
     <div className="modal-bg" onClick={close}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <div className="top">

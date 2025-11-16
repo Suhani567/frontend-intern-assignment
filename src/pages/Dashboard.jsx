@@ -20,6 +20,8 @@ export default function Dashboard() {
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
+
+    // api fetching
     async function fetchProducts() {
       try {
         const res = await fetch("https://fakestoreapi.com/products");

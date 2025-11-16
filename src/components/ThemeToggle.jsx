@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
+  
+  // Apply dark/light theme globally
   const [theme, setTheme] = useState(() =>
     localStorage.getItem("theme") || "light"
   );
 
-  // Apply dark/light theme globally
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");

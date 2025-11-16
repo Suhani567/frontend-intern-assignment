@@ -1,5 +1,7 @@
 export default function SearchBar({ search, setSearch }) {
   return (
+
+    // Search input for products
     <input
       className="input"
       type="text"

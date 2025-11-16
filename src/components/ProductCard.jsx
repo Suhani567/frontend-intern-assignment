@@ -1,5 +1,7 @@
 export default function ProductCard({ product, onView }) {
   return (
+
+    // Card component to display product details
     <article className="card" role="article">
       <img src={product.image} alt={product.title} />
       <div>

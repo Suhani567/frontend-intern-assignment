@@ -8,7 +8,10 @@
   font-size: 14px;
   outline: none;
 }
-.input:focus, .select:focus { box-shadow: 0 0 0 4px var(--input-focus-shadow); border-color: var(--input-focus-border); }
+.input:focus, .select:focus { 
+  box-shadow: 0 0 0 4px var(--input-focus-shadow);
+  border-color: var(--input-focus-border);
+}
 
 /* Product card */
 .card {
@@ -21,7 +24,11 @@
   gap: 10px;
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px var(--hover-shadow); }
+
+.card:hover {
+   transform: translateY(-6px);
+   box-shadow: 0 18px 40px var(--hover-shadow);
+}
 
 .card img {
   width: 100%;
@@ -31,7 +38,7 @@
   border-radius: 8px;
 }
 
-/* title, price */
+/* card title, price */
 .card .title { font-size: 15px; font-weight: 600; line-height: 1.3; color: var(--text); }
 .card .price { font-weight: 700; color: var(--price-color); }
 
@@ -131,70 +138,6 @@
 @keyframes skeleton-loading {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
-}
-
-/* pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin-top: 24px;
-  flex-wrap: wrap;
-}
-
-.pagination-btn {
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  background: var(--card-bg);
-  color: var(--text);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 14px;
-}
-
-.pagination-btn:hover:not(:disabled) {
-  background: var(--btn-bg);
-  color: var(--btn-text);
-}
-
-.pagination-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.pagination-btn.active {
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  font-weight: 600;
-}
-
-/* favorite button */
-.favorite-btn {
-  border: 1px solid var(--border);
-  background: var(--card-bg);
-  color: var(--text);
-  padding: 9px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 16px;
-}
-
-.favorite-btn:hover {
-  background: var(--btn-bg);
-  color: var(--btn-text);
-}
-
-.favorite-btn.favorited {
-  background: #ff4757;
-  color: white;
-  border-color: #ff4757;
-}
-
-.favorite-btn.favorited:hover {
-  background: #ff3742;
 }
 
 /* small screen modal */

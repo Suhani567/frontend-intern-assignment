@@ -34,6 +34,7 @@
     margin-top: 18px;
 }
 
+/* for small screens */
 @media (max-width: 520px) {
     .filters{
         gap: 8px;

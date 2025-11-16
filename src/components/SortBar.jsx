@@ -1,5 +1,6 @@
 export default function SortBar({ sortOrder, setSortOrder }) {
   return (
+    // Sorts the items by price
     <select
       className="select"
       value={sortOrder}

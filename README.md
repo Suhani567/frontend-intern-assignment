@@ -2,6 +2,14 @@
 
 A modern, responsive React application for browsing and managing products with a beautiful dark/light theme toggle.
 
+# Overview of the Dashboard 
+
+## Light Mode 
+<img width="1639" height="912" alt="image" src="https://github.com/user-attachments/assets/c03a2d5f-2b98-4921-9828-b208c61991e4" />
+
+## Dark Mode 
+<img width="1475" height="906" alt="image" src="https://github.com/user-attachments/assets/38734016-bbd3-4d77-9762-a20cc0a1647a" />
+
 ## 🚀 Features
 
 - **Product Catalog**: Browse products from the FakeStore API

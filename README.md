@@ -16,11 +16,13 @@ A modern, responsive React application for browsing and managing products with a
 - **Search Functionality**: Search products by title
 - **Category Filtering**: Filter products by categories
 - **Price Sorting**: Sort products by price (low to high, high to low)
+- **Pagination**: Navigate through products with 6 products per page in a 3x2 grid layout
 - **Product Details Modal**: View detailed product information
 - **Theme Toggle**: Switch between light and dark modes
 - **Responsive Design**: Works on desktop and mobile devices
 - **Skeleton Loading**: Smooth loading states with skeleton placeholders
 - **Modern UI**: Clean, accessible design with smooth animations
+- **Logo Display**: Custom logo in the header
 
 ## 🛠️ Tech Stack
 
@@ -61,6 +63,7 @@ npm run build
 - **Search**: Type in the search bar to find products by title
 - **Filter**: Use the category dropdown to filter by product categories
 - **Sort**: Sort products by price using the sort dropdown
+- **Pagination**: Use the pagination controls to navigate through pages (6 products per page)
 - **Theme**: Click the theme toggle button to switch between light and dark modes
 - **View Details**: Click "View Details" on any product card to see more information
 
@@ -78,9 +81,10 @@ src/
 │   ├── SearchBar.jsx        # Search input component
 │   ├── FilterBar.jsx        # Category filter dropdown
 │   ├── SortBar.jsx          # Price sorting dropdown
+│   ├── Pagination.jsx       # Pagination component for navigating pages
 │   ├── ThemeToggle.jsx      # Theme switcher
 │   └── SkeletonLoader.jsx   # Loading skeleton
-│        
+│
 ├── pages/
 │   └── Dashboard.jsx        # Main dashboard page
 ├── styles/

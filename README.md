@@ -34,7 +34,7 @@ A modern, responsive React application for browsing and managing products with a
 
 1. Clone the repository:
 ```bash
-git clone <[https://github.com/Suhani567/frontend-intern-assignment.git]>
+git clone https://github.com/Suhani567/frontend-intern-assignment.git
 cd frontend-intern-assignment
 ```
 

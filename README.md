@@ -34,7 +34,7 @@ A modern, responsive React application for browsing and managing products with a
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone <[https://github.com/Suhani567/frontend-intern-assignment.git]>
 cd frontend-intern-assignment
 ```
 
@@ -79,8 +79,8 @@ src/
 │   ├── FilterBar.jsx        # Category filter dropdown
 │   ├── SortBar.jsx          # Price sorting dropdown
 │   ├── ThemeToggle.jsx      # Theme switcher
-│   ├── SkeletonLoader.jsx   # Loading skeleton
-│   └── Pagination.jsx       # Pagination component
+│   └── SkeletonLoader.jsx   # Loading skeleton
+│        
 ├── pages/
 │   └── Dashboard.jsx        # Main dashboard page
 ├── styles/

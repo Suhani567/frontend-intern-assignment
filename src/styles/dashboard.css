@@ -1,11 +1,15 @@
 .dashboard{
     padding-top: 18px;
+    position: relative;
+    overflow: hidden;
 }
+
+
 
 .header{
     background: var(--header-bg);
     color: var(--header-text);
-    padding: 14px 20px;
+    padding: 20px 20px;
     border-radius: 10px;
     margin-bottom: 18px;
     box-shadow: 0 6px 18px var(--shadow);
@@ -29,7 +33,7 @@
 
 .product-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     margin-top: 18px;
 }

@@ -7,6 +7,7 @@ import SortBar from "../components/SortBar";
 import ProductCard from "../components/ProductCard";
 import ProductModal from "../components/ProductModal";
 import ThemeToggle from "../components/ThemeToggle";
+import Pagination from "../components/Pagination";
 
 export default function Dashboard() {
 
@@ -18,6 +19,13 @@ export default function Dashboard() {
   const [category, setCategory] = useState("all");
   const [sortOrder, setSortOrder] = useState("none");
   const [selected, setSelected] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 6; // 3 rows of 3 products each
+
+  // reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search, category, sortOrder]);
 
   useEffect(() => {
 
@@ -43,8 +51,13 @@ export default function Dashboard() {
     <div className="dashboard container">
       <div className="header">
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-          <div style={{ fontSize: 20, fontWeight: 700 }}>Mini Product Dashboard</div>
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <img src="/image.png" alt="Logo" style={{ height: 60, width: 60 }} />
+            <div style={{ fontSize: 24, fontWeight: 700 }}>Mini Product Dashboard</div>
+          </div>
           <ThemeToggle />
+
+
         </div>
       </div>
       <div className="filters" role="region" aria-label="filters">
@@ -78,12 +91,23 @@ export default function Dashboard() {
   if (sortOrder === "low-high") filtered = filtered.slice().sort((a, b) => a.price - b.price);
   if (sortOrder === "high-low") filtered = filtered.slice().sort((a, b) => b.price - a.price);
 
+  // pagination
+  const totalPages = Math.ceil(filtered.length / productsPerPage);
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const paginatedProducts = filtered.slice(startIndex, startIndex + productsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div className="dashboard container">
       <div className="header">
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-          <div style={{ fontSize: 20, fontWeight: 700 }}>Mini Product Dashboard</div>
-
+          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+            <img src="/image.png" alt="Logo" style={{ height: 60, width: 60 }} />
+            <div style={{ fontSize: 24, fontWeight: 700 }}>Mini Product Dashboard</div>
+          </div>
           <ThemeToggle />
 
 
@@ -102,10 +126,12 @@ export default function Dashboard() {
         </p>
       )}
       <div className="product-grid" role="list">
-        {filtered.map((product) => (
+        {paginatedProducts.map((product) => (
           <ProductCard key={product.id} product={product} onView={(p) => setSelected(p)} />
         ))}
       </div>
+
+      <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
 
       <ProductModal product={selected} close={() => setSelected(null)} />
     </div>
